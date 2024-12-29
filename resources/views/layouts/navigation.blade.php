@@ -15,6 +15,25 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('divisions.view')" :active="request()->routeIs('/divisions.view')">
+                        {{ __('Division') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('district.view')" :active="request()->routeIs('/district.view')">
+                        {{ __('District') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('upazillas.view')" :active="request()->routeIs('/upazillas.view')">
+                        {{ __('Upazilla') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('unions.view')" :active="request()->routeIs('/unions.view')">
+                        {{ __('Union') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('words.view')" :active="request()->routeIs('/words.view')">
+                        {{ __('Word') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('villages.view')" :active="request()->routeIs('/villages.view')">
+                        {{ __('Village') }}
+                    </x-nav-link>
+                    
                 </div>
             </div>
 

@@ -9,4 +9,12 @@ class Upazilla extends Model
 {
     /** @use HasFactory<\Database\Factories\UpazillaFactory> */
     use HasFactory;
+    protected $fillable = [
+        'upazilla_name',
+        'division_id',
+        'district_id',
+        
+    ];
+
+
 }

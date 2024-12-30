@@ -9,4 +9,12 @@ class Word extends Model
 {
     /** @use HasFactory<\Database\Factories\WordFactory> */
     use HasFactory;
+    protected $fillable = [
+        'word_name',
+        'division_id',
+        'district_id',
+        'upazilla_id',
+        'union_id',
+    ];
+
 }

@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('upazillas', function (Blueprint $table) {
             $table->id();
+            $table->string('upazilla_name')->unique();
+            $table->foreignId('division_id')->constrained('divisions')->onDelete('cascade');
+            $table->foreignId('district_id')->constrained('districts')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -9,4 +9,10 @@ class Union extends Model
 {
     /** @use HasFactory<\Database\Factories\UnionFactory> */
     use HasFactory;
+    protected $fillable = [
+        'union_name',
+        'division_id',
+        'district_id',
+        'upazilla_id',
+    ];
 }

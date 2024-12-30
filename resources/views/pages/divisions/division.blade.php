@@ -12,99 +12,59 @@
                 <div class="p-6 text-gray-900">
                     <form action="">
                         <div class="text-center font-semibold text-4xl text-gray-800 leading-tight py-6">
-                            <h1>Division crud</h1>
+                            <h1>Division Management</h1>
                         </div>
 
                         <div class="text-end">
                             {{-- <x-primary-button>{{ __('Add') }}</x-primary-button> --}}
+                            <a href="{{ route('divisions.add') }}">
                             <button type="button"
-                                class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Add
-                                Division</button>
+                                class="text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                               Add Division
+                            </button>
+                        </a>
                         </div>
                         <div class="py-6 ">
                             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <table class="w-full text-sm text-center rtl:text-right text-gray-500 dark:text-gray-400">
                                     <thead
                                         class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                         <tr>
-                                            <th scope="col" class="px-6 py-3">
-                                                Product name
+                                            <th scope="col" class=" px-6 py-3">
+                                                Division name
                                             </th>
-                                            <th scope="col" class="px-6 py-3">
-                                                <div class="flex items-center">
-                                                    Color
-                                                    <a href="#"><svg class="w-3 h-3 ms-1.5" aria-hidden="true"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                            viewBox="0 0 24 24">
-                                                            <path
-                                                                d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
-                                                        </svg></a>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="px-6 py-3">
-                                                <div class="flex items-center">
-                                                    Category
-                                                    <a href="#"><svg class="w-3 h-3 ms-1.5" aria-hidden="true"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                            viewBox="0 0 24 24">
-                                                            <path
-                                                                d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
-                                                        </svg></a>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="px-6 py-3">
-                                                <div class="flex items-center">
-                                                    Price
-                                                    <a href="#"><svg class="w-3 h-3 ms-1.5" aria-hidden="true"
-                                                            xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                            viewBox="0 0 24 24">
-                                                            <path
-                                                                d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
-                                                        </svg></a>
-                                                </div>
-                                            </th>
-                                            <th scope="col" class="px-6 py-3">
-                                                <span class="flex items-center text-center">Action</span>
+                                           <th scope="col" class="px-6 py-3">
+                                                <span class="text-center">Action</span>
                                             </th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody 
+                                        class="text-center">
+                                        @foreach ($allData as $key => $division)
                                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                             <th scope="row"
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                Apple MacBook Pro 17"
+                                                {{ $division->division_name }}
                                             </th>
                                             <td class="px-6 py-4">
-                                                Silver
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                Laptop
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                $2999
-                                            </td>
-                                            <td class="px-6 py-4 text-left">
-                                                <button type="button" class="text-white text-xs bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-cyan-500/50  dark:shadow-cyan-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">Edit</button>
-                                                <button type="button" class="text-white text-xs bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-red-500/50  dark:shadow-red-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">Delete</button>
-                                                <button type="button" class="text-white text-xs bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-green-500/50  dark:shadow-green-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">view</button>
+                                                <a href="{{ route('divisions.edit' , $division->id)}}"  class="text-white text-xs bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-cyan-500/50  dark:shadow-cyan-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">
+                                                    Edit
+                                                </a>
+                                                <a href="{{ route('divisions.delete' , $division->id)}}" class="text-white text-xs bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-red-500/50  dark:shadow-red-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">Delete
+                                                </a>
+                                                <a href="" class="text-white text-xs bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-green-500/50  dark:shadow-green-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">view
+                                                </a>
                                                
                                             </td>
                                         </tr>
-                                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                        @endforeach
+                                        
+                                        {{-- <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                             <th scope="row"
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 Microsoft Surface Pro
                                             </th>
-                                            <td class="px-6 py-4">
-                                                White
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                Laptop PC
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                $1999
-                                            </td>
-                                            <td class="px-6 py-4 text-left">
+                                            <td class="px-6 py-4 ">
                                                 <button type="button" class="text-white text-xs bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-cyan-500/50  dark:shadow-cyan-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">Edit</button>
                                                 <button type="button" class="text-white text-xs bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-red-500/50  dark:shadow-red-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">Delete</button>
                                                 <button type="button" class="text-white text-xs bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-green-500/50  dark:shadow-green-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">view</button>
@@ -116,22 +76,14 @@
                                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                 Magic Mouse 2
                                             </th>
+
                                             <td class="px-6 py-4">
-                                                Black
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                Accessories
-                                            </td>
-                                            <td class="px-6 py-4">
-                                                $99
-                                            </td>
-                                            <td class="px-6 py-4 text-left">
                                                 <button type="button" class="text-white text-xs bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-cyan-500/50  dark:shadow-cyan-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">Edit</button>
                                                 <button type="button" class="text-white text-xs bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-red-500/50  dark:shadow-red-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">Delete</button>
                                                 <button type="button" class="text-white text-xs bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-green-500/50  dark:shadow-green-800/80 font-medium rounded-lg px-3 py-1.5 text-center me-1 mb-1">view</button>
                                                
                                             </td>
-                                        </tr>
+                                        </tr> --}}
                                     </tbody>
                                 </table>
                             </div>

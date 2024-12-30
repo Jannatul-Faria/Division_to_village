@@ -9,4 +9,8 @@ class District extends Model
 {
     /** @use HasFactory<\Database\Factories\DistrictFactory> */
     use HasFactory;
+    protected $fillable = [
+        'district_name',
+        'division_id',
+    ];
 }

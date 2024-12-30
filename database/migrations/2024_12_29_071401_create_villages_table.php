@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('villages', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('village_name')->unique();
+            $table->foreignId('division_id')->constrained('divisions')->onDelete('cascade');
+            $table->foreignId('district_id')->constrained('districts')->onDelete('cascade');
+            $table->foreignId('upazilla_id')->constrained('upazillas')->onDelete('cascade');
+            $table->foreignId('union_id')->constrained('unions')->onDelete('cascade');
+            $table->foreignId('word_id')->constrained('words')->onDelete('cascade');
+           
         });
     }
 

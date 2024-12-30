@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('words', function (Blueprint $table) {
             $table->id();
+            $table->string('words_name')->unique();
+            $table->foreignId('division_id')->constrained('divisions')->onDelete('cascade');
+            $table->foreignId('district_id')->constrained('districts')->onDelete('cascade');
+            $table->foreignId('upazilla_id')->constrained('upazillas')->onDelete('cascade');
+            $table->foreignId('union_id')->constrained('unions')->onDelete('cascade');
+           
             $table->timestamps();
         });
     }

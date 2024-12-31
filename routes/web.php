@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
 Route::prefix('divisions')->group(function(){
     Route::get('/view',[DivisionController::class, 'view'])->name('divisions.view');
     Route::get('/add', [DivisionController::class, 'add'])->name('divisions.add');
+    Route::get('/show/{id}', [DivisionController::class, 'add'])->name('divisions.show');
     Route::post('/store',[DivisionController::class, 'store'])->name('divisions.store');
     Route::get('/edit/{id}',[DivisionController::class, 'edit'])->name('divisions.edit');
     Route::post('/update/{id}', [DivisionController::class, 'update'])->name('divisions.update');

@@ -28,6 +28,12 @@ class DivisionController extends Controller
     }
     public function edit($id){
 
-        return view('pages.divisions.edit_division');
+        $data['editData']= Division::find($id);
+        return view('pages.divisions.add_division',$data);
+    }
+    public function show($id){
+
+        $data['editData']= Division::find($id);
+        return view('pages.divisions.add_division',$data);
     }
 }
